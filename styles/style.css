@@ -1,13 +1,200 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-                                        /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  padding: var(--padding-page);
+  background-image: var(--bg-img-page);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header__rec {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  inline-size: 52px;
+  block-size: 26px;
+  gap: 10px;
+  inset-block-start: 10px;
+  inset-inline-end: 9px;
+  color: #ff0070;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 139%;
+  text-align: center;
+}
+
+.header__rec::after {
+  content: "";
+  display: block;
+  border-radius: 100%;
+  background-color: #ff0070;
+  box-shadow: 0 0 4px 2px #ff0070;
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 10px;
+  inset-inline-end: 0;
+  border-block-start: 1px solid var(--nav-color);
+  border-inline-end: 1px solid var(--nav-color);
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 10px;
+  border-inline-start: 1px solid var(--nav-color);
+  border-block-end: 1px solid var(--nav-color);
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 .header {
-  background-image: url(../images/cover-image-dark.png);
-  background-position: center;
-  background-size: cover;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
+  align-items: center;
+  min-block-size: 668px;
+  margin-block-end: var(--gap-page);
+ }
+
+ .header__theme-menu-list {
+  display: grid;
+  gap: var(--gap-nav-menu);
+  justify-items: center;
+ }
+
+ .header__theme-menu-button {
+  color: var(--nav-color);
+  text-transform: lowercase;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  inline-size: 70px;
+  block-size: 26px;
+ }
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--nav-color-hover);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--nav-color);
+  padding: 0 13px;
+ }
+
+.header__logo {
+  font-weight: 700;
+  line-height: 83%;
+  font-size: var(--size-logo);
+  color: var(--color-header-title);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.text-header {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  min-inline-size: 355px;
+  max-inline-size: 491px;
+  min-block-size: 70px;
+  max-block-size: 117px;
+}
+
+.title-decor {
+  color: var(--color-title-block);
+  background-color: var(--bg-block-title);
+}
+
+.content {
+  display: grid;
+  gap: var(--gap-main);
+  margin-block-end: var(--gap-page);
+}
+
+.content__section {
+  display: grid;
+  gap: 20px;
+}
+
+.content__section__image-gap {
+  gap: 10px;
+}
+
+.section {
+  display: grid;
+  gap: var(--gap-section)
+}
+
+.section__title {
+  font-weight: 700;
+  line-height: 130%;
+  font-size: 18px;
+  color: var(--bg-block-title);
+}
+
+.text-blocks {
+  display: grid; 
+  gap: 20px;
+}
+
+.text-block {
+  display: grid;
+  gap: 10px;
+}
+
+.text-block__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.text-block__description {
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--color-text-block)
+}
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--color-text-block);
+}
+
+.text-weight {
+  font-weight: 400;
+}
+
+.gallery__images {
+  inline-size: 100%;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  min-block-size: 668px;
+  align-items: center;
+  justify-items: center;
+}
+
+.footer__logo {
+  font-weight: 700;
+  line-height: 83%;
+  font-size: var(--size-logo);
+  color: var(--color-header-title);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
