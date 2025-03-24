@@ -3,6 +3,16 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root {--bg-color-page: #000028;
+--bg-img-page: url(../images/cover-image-dark.png);
+--bg-block-title: #ff0070;
+--accent-color: #ff0070;
+--color-header-title: #DB00FF;
+--color-title-block: #000028;
+--color-text-block: #F1B2CE;
+--nav-color: #ff0070;
+--nav-color-hover: rgb(255, 0, 112, 0.4);
+}
 
 :root.theme-dark {
   /* сохраните этот селектор в приведённом виде.
