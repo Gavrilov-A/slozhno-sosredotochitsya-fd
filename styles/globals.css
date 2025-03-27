@@ -13,7 +13,7 @@ body {
   font-family: var(--font-family, sans-serif);
   font-size: 16px;
   line-height: 1.5;
-  background-color: var(--bg-color-page, #000028);  
+  background-color: var(--bg-color-page, #000028);
 }
 
 h1,

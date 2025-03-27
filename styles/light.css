@@ -5,9 +5,11 @@
 */
 
 :root.theme-light {
+  --bg-color-page: #ff8dcb;
   --bg-img-page: url(../images/cover-image-light.png);
   --bg-block-title: #ff8dcb;
-  --accent-color: #ff8dcb;;
+  --accent-color: #ff8dcb;
+  --color-title-section: #353430;
   --color-logo: #ffc2e6;
   --color-title-block: #353430;
   --color-text-block: #353430;
@@ -16,24 +18,24 @@
 }
 
 .theme-light .header__rec {
-    display: none;
+  display: none;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    --bg-color-page: #ff8dcb;
     --bg-img-page: url(../images/cover-image-light.png);
     --bg-block-title: #ff8dcb;
-    --accent-color: #ff8dcb;;
+    --accent-color: #ff8dcb;
+    --color-title-section: #353430;
     --color-logo: #ffc2e6;
     --color-title-block: #353430;
     --color-text-block: #353430;
     --nav-color: #353430;
     --nav-color-hover: rgb(53, 52, 48, 0.4);
   }
-  
+
   .header__rec {
-    display: none; 
+    display: none;
   }
 }
-
-
